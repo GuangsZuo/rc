@@ -16,7 +16,7 @@ set smartcase
 " 突出显示当前列
 " set cursorcolumn
 " " 突出显示当前行
- set cursorline
+set cursorline
 
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -38,7 +38,6 @@ filetype plugin indent on    " required
 syntax on 
 color dracula
 hi Normal ctermbg=none
-
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -56,6 +55,11 @@ hi Normal ctermbg=none
 " until a split is created. If you want it to appear all the time, add the
 " following to your vimrc: set laststatus=2
 set laststatus=2
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+
 
 "==========================================
 "" HotKey Settings  自定义快捷键设置
