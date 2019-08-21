@@ -32,6 +32,8 @@ Plugin 'bling/vim-airline'
 
 Plugin 'dracula/vim'
 
+Plugin 'Valloric/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -59,6 +61,20 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
+" youcompeleteme
+" @youcompleteme {{{
+let g:ycm_auto_trigger=1
+let g:ycm_add_preview_to_completeopt=1 
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_autoclose_preview_window_after_insertion=1
+" let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'"
+" let g:ycm_autoclose_preview_window_after_completion=1
+nnoremap ga :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap gs :YcmCompleter GoToDeclaration<CR>
+nnoremap gd :YcmCompleter GetDoc<CR>
+nnoremap gf :YcmCompleter FixIt<CR>
+nnoremap gz :YcmCompleter GoToInclude<CR>
+nnoremap gs :tab vsplit \| YcmCompleter GoToDeclaration<CR>
 
 
 "==========================================
